@@ -1,8 +1,9 @@
 {
   "name": "emlite-cpp",
-  "version-string": "0.1.0",
+  "version": "0.1.0",
   "description": "emlite is a tiny JS bridge for native C/C++ code via Wasm.",
   "homepage": "https://github.com/emlite/emlite-cpp",
+  "license": "MIT",
   "dependencies": [
     "ems-env"
   ]

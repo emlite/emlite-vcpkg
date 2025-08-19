@@ -1,6 +1,7 @@
 {
   "name": "ems-env",
-  "version-string": "0.1.0",
+  "version": "0.1.0",
   "description": "ems-env is an emscripten adapter for the emlite project.",
-  "homepage": "https://github.com/emlite/ems-env"
+  "homepage": "https://github.com/emlite/ems-env",
+  "license": "MIT"
 }

@@ -4,11 +4,12 @@
   "description": "Wasmbind is a C++ projects that offers bindings to Web APIs for use with wasm.",
   "homepage": "https://github.com/emlite/wasmbind",
   "license": "MIT",
-  "dependencies": ["emlite-cpp"],
+  "dependencies": [
+    "emlite-cpp"
+  ],
   "features": {
     "webbind": {
       "description": "Build/install the webbind library"
     }
-  },
-  "default-features": []
+  }
 }

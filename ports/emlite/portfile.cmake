@@ -2,7 +2,7 @@ vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO emlite/emlite-cpp
     REF v${VERSION}
-    SHA512 0
+    SHA512 7cb88f4408faec473a993945f975d89c80fed9489c8c95d6224b914c080cb18b7c4f94b66376387402bf7ab4e1f4bd743964a499aea3f0d1387d0599eee0aa89
     HEAD_REF main
 )
 
@@ -15,7 +15,7 @@ vcpkg_cmake_configure(
 vcpkg_cmake_build()
 vcpkg_cmake_install()
 
-vcpkg_fixup_cmake_targets(CONFIG_PATH lib/cmake)
+vcpkg_cmake_config_fixup(PACKAGE_NAME emlite CONFIG_PATH "lib/cmake/emlite")
 
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/share")
 vcpkg_install_copyright(FILE_LIST "${SOURCE_PATH}/LICENSE")

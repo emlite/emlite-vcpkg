@@ -3,5 +3,15 @@
   "version": "0.1.0",
   "description": "ems-env is an emscripten adapter for the emlite project.",
   "homepage": "https://github.com/emlite/ems-env",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ]
 }

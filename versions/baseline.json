@@ -1,3 +1,20 @@
 {
-  "default": {}
+  "default": {
+    "emlite": {
+      "baseline": "0.1.1",
+      "port-version": 0
+    },
+    "emlite-cpp": {
+      "baseline": "0.1.0",
+      "port-version": 0
+    },
+    "ems-env": {
+      "baseline": "0.1.0",
+      "port-version": 0
+    },
+    "wasmbind": {
+      "baseline": "0.1.1",
+      "port-version": 0
+    }
+  }
 }

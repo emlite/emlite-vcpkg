@@ -1,11 +1,20 @@
 {
   "name": "wasmbind",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Wasmbind is a C++ projects that offers bindings to Web APIs for use with wasm.",
   "homepage": "https://github.com/emlite/wasmbind",
   "license": "MIT",
   "dependencies": [
-    "emlite-cpp"
+    "emlite",
+    "vcpkg-cmake",
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
   ],
   "features": {
     "webbind": {

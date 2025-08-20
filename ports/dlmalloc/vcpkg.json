@@ -1,0 +1,17 @@
+{
+  "name": "dlmalloc",
+  "version": "0.1.0",
+  "description": "dlmalloc is a memory allocator use by emlite for wasm32-freestanding.",
+  "homepage": "https://github.com/emlite/dlmalloc",
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ]
+}

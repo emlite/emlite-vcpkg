@@ -6,9 +6,15 @@ vcpkg_from_github(
     HEAD_REF main
 )
 
+set(EMLITE_CLIB_ONLY OFF)
+if("capi" IN_LIST FEATURES)
+    set(EMLITE_CLIB_ONLY ON)
+endif()
+
 vcpkg_cmake_configure(
     SOURCE_PATH "${SOURCE_PATH}"
     OPTIONS
+        -DEMLITE_CLIB_ONLY=${EMLITE_CLIB_ONLY}
         -DEMLITE_BUILD_EXAMPLES=OFF
 )
 

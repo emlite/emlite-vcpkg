@@ -5,7 +5,10 @@
   "homepage": "https://github.com/emlite/emlite-cpp",
   "license": "MIT",
   "dependencies": [
-    "ems-env",
+    {
+      "name": "ems-env",
+      "platform": "emscripten"
+    },
     {
       "name": "vcpkg-cmake",
       "host": true
@@ -14,5 +17,10 @@
       "name": "vcpkg-cmake-config",
       "host": true
     }
-  ]
+  ],
+  "features": {
+    "capi": {
+      "description": "Build the C api only"
+    }
+  }
 }

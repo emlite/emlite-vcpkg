@@ -6,7 +6,6 @@ vcpkg_from_github(
     HEAD_REF main
 )
 
-# Turn features into CMake options
 set(WASMBIND_BUILD_WEBBIND OFF)
 if("webbind" IN_LIST FEATURES)
     set(WASMBIND_BUILD_WEBBIND ON)

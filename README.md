@@ -46,6 +46,8 @@ find_package(wasmbind CONFIG REQUIRED)
 add_executable(myapp main.cpp)
 
 target_link_libraries(myapp PRIVATE wasmbind::webbind)
+
+set_target_properties(myapp PROPERTIES LINKER_LANGUAGE CXX SUFFIX .js LINK_FLAGS "-sSINGLE_FILE -sALLOW_MEMORY_GROWTH=1 -sEXPORTED_FUNCTIONS=_main -Wl,--strip-all,--export-dynamic")
 ```
 
 To build, you will have to pass both the emscripten toolchain file and the vcpkg toolchain file:

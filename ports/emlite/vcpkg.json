@@ -1,12 +1,12 @@
 {
   "name": "emlite",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "emlite is a tiny JS bridge for native C/C++ code via Wasm.",
   "homepage": "https://github.com/emlite/emlite-cpp",
   "license": "MIT",
   "dependencies": [
     {
-      "name": "ems-env",
+      "name": "emsenv",
       "platform": "emscripten"
     },
     {

@@ -5,7 +5,7 @@
       "port-version": 0
     },
     "emlite": {
-      "baseline": "0.1.1",
+      "baseline": "0.1.2",
       "port-version": 0
     },
     "emlite-cpp": {
@@ -16,12 +16,16 @@
       "baseline": "0.1.0",
       "port-version": 0
     },
+    "emsenv": {
+      "baseline": "0.1.2",
+      "port-version": 0
+    },
     "wasmbind": {
-      "baseline": "0.1.1",
+      "baseline": "0.1.2",
       "port-version": 0
     },
     "wasmcbind": {
-      "baseline": "0.1.1",
+      "baseline": "0.1.2",
       "port-version": 0
     }
   }

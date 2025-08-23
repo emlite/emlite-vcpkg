@@ -1,16 +1,11 @@
 {
   "name": "wasmcbind",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Wasmcbind is a C project that offers bindings to Web APIs for use with wasm.",
   "homepage": "https://github.com/emlite/wasmcbind",
   "license": "MIT",
   "dependencies": [
-    {
-      "name": "emlite",
-      "features": [
-        "capi"
-      ]
-    },
+    "emlitec",
     {
       "name": "vcpkg-cmake",
       "host": true

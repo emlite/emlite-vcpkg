@@ -1,0 +1,32 @@
+{
+  "name": "emcore",
+  "version": "0.1.0",
+  "description": "emcore is a tiny JS bridge for native C/C++ code via Wasm.",
+  "homepage": "https://github.com/emlite/emcore",
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "emsenv",
+      "platform": "emscripten"
+    },
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ],
+  "features": {
+    "dlmalloc": {
+      "description": "Enable EMLITE_USE_DLMALLOC (recommended for bare wasm).",
+      "dependencies": [
+        {
+          "name": "dlmalloc",
+          "platform": "wasm32 & !emscripten & !wasi"
+        }
+      ]
+    }
+  }
+}

@@ -2,7 +2,7 @@ vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO emlite/emlitec
     REF v${VERSION}
-    SHA512 88cb5bf2f87caa782de048cee2129efe68c19b0913aeace38b45a34f1af5010b5f0b5d9205ddb4ef3a49aa5552cd3664d1a2f17356c81d1cf0b741cbe3f764c0
+    SHA512 b93ec66ef2edd9e281d8b4279d93feb874662246c5f3ebca2c3fb23fcc942ec1a65fc861894535bda0221e47c0f4f9b3b5853682931f5dc6cea02b2f5665cf4f
     HEAD_REF main
 )
 

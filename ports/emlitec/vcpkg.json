@@ -1,6 +1,6 @@
 {
   "name": "emlitec",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "description": "emlitec is a tiny JS bridge for native C code via Wasm.",
   "homepage": "https://github.com/emlite/emlitec",
   "license": "MIT",

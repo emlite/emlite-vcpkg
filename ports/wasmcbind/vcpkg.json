@@ -1,6 +1,6 @@
 {
   "name": "wasmcbind",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Wasmcbind is a C project that offers bindings to Web APIs for use with wasm.",
   "homepage": "https://github.com/emlite/wasmcbind",
   "license": "MIT",

@@ -1,6 +1,6 @@
 {
   "name": "wasmbind",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Wasmbind is a C++ project that offers bindings to Web APIs for use with wasm.",
   "homepage": "https://github.com/emlite/wasmbind",
   "license": "MIT",

@@ -28,7 +28,7 @@ And the vcpkg-configuration.json to add this custom registry:
     {
       "kind": "git",
       "repository": "https://github.com/emlite/emlite-vcpkg",
-      "baseline": "0c8eabd66319886b4b73c80cb370f9a15d97a460",
+      "baseline": "6750fea4e2d61450b62abfa77765badc97a323f7",
       "packages": ["emsenv", "emcore", "emlite", "wasmbind"]
     }
   ]

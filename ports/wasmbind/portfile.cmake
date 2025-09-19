@@ -2,7 +2,7 @@ vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO emlite/wasmbind
     REF v${VERSION}
-    SHA512 e3af3892ddddb4a82799df6dd413f9d1acdf91fa11dd37622bba0bbf4bfd096cef3a36d89a6c4fe9468d44651f51ea79bb61f25c0de4bc3fc1e050715d5e49f4
+    SHA512 020860ec2e333573bbf707a33afbd6a7e15fd467dc56627d2fe7aa51724c3737fa1f666125254b6aa38147f98b3b09d7bb3c229d7124bebbcb8f6815d849fbff
     HEAD_REF main
 )
 

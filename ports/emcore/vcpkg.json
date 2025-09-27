@@ -1,6 +1,6 @@
 {
   "name": "emcore",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "emcore is a tiny JS bridge for native C/C++ code via Wasm.",
   "homepage": "https://github.com/emlite/emcore",
   "license": "MIT",

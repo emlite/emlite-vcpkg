@@ -2,7 +2,7 @@
 
 A custom vcpkg registry for emlite projects, which allows you to use emlite packages via vcpkg.
 
-## Usage
+## Usage as a remote registry
 When initializing a vcpkg project using for example `vcpkg new --application`. A vcpkg.json and a vcpkg-configuration.json are created for you.
 
 You can modify the vcpkg.json to add emlite projects:
@@ -36,7 +36,49 @@ And the vcpkg-configuration.json to add this custom registry:
 ```
 Change the baseline according to your needs, the baselines correspond to the commit SHA of the vcpkg's repo you're using, and this custom registy.
 
-Now you can link the necessary libraries in your CMakeLists.txt file:
+You can install the packages manually:
+```bash
+vcpkg install --overlay-ports=./emlite-vcpkg/ports --triplet=wasm32-emscripten
+```
+
+Or you can directly invoke cmake (if using CMake), where will have to pass both the emscripten toolchain file and the vcpkg toolchain file:
+```bash
+cmake -S . -B bin -DCMAKE_TOOLCHAIN_FILE=$VCPKG_ROOT/scripts/buildsystems/vcpkg.cmake -DVCPKG_TARGET_TRIPLET=wasm32-emscripten -DVCPKG_CHAINLOAD_TOOLCHAIN_FILE=$EMSDK/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake -DCMAKE_BUILD_TYPE=Release
+cmake --build bin
+```
+
+## Usage as overlay ports
+Alternatively you can add this repo to your project as a git submodule. Then when using vcpkg to install your dependencies, you would pass the `--overlay-ports=emlite-vcpkg/ports` argument to vcpkg.
+
+So in the root of your project:
+```bash
+git submodule add https://github.com/emlite/emlite-vcpkg
+```
+
+In your vcpkg.json:
+```json
+{
+  "name": "demo",
+  "version": "0.0.1",
+  "dependencies": [
+    { "name": "wasmbind", "features": ["webbind"] }
+  ]
+}
+```
+
+You can install the packages manually:
+```bash
+vcpkg install --overlay-ports=./emlite-vcpkg/ports --triplet=wasm32-emscripten
+```
+
+Or directly invoke cmake (if using cmake):
+```bash
+cmake -S . -B bin -DCMAKE_TOOLCHAIN_FILE=$VCPKG_ROOT/scripts/buildsystems/vcpkg.cmake -DVCPKG_TARGET_TRIPLET=wasm32-emscripten -DVCPKG_CHAINLOAD_TOOLCHAIN_FILE=$EMSDK/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake -DCMAKE_BUILD_TYPE=Release
+cmake --build bin
+```
+
+## A typical CMakeLists.txt
+You can link the necessary libraries in your CMakeLists.txt file:
 ```cmake
 cmake_minimum_required(VERSION 3.28)
 project(demo)
@@ -48,10 +90,4 @@ add_executable(myapp main.cpp)
 target_link_libraries(myapp PRIVATE wasmbind::webbind)
 
 set_target_properties(myapp PROPERTIES LINKER_LANGUAGE CXX SUFFIX .js LINK_FLAGS "-sSINGLE_FILE -sALLOW_MEMORY_GROWTH=1 -sEXPORTED_FUNCTIONS=_main -Wl,--strip-all,--export-dynamic")
-```
-
-To build, you will have to pass both the emscripten toolchain file and the vcpkg toolchain file:
-```bash
-cmake -S . -B bin -DCMAKE_TOOLCHAIN_FILE=$VCPKG_ROOT/scripts/buildsystems/vcpkg.cmake -DVCPKG_TARGET_TRIPLET=wasm32-emscripten -DVCPKG_CHAINLOAD_TOOLCHAIN_FILE=$EMSDK/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake -DCMAKE_BUILD_TYPE=Release
-cmake --build bin
 ```
